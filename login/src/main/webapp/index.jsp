@@ -13,21 +13,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body> 
-      <div style="width:30%; margin-inline: 35%;">
-        <h1 style="text-align: center;">Wellcom to My Website</h1>
-        <form style="float:left; width: 45%; text-align:right"  action="<%=request.getContextPath() + UrlConst.REGISTER %>" method="get" >
-            <button type="submit" class="btn btn-primary w-50">Register</button>    
+      <div style="width:30%; margin-inline: auto; min-width: 300px">
+        <h1 style="text-align: center;">Wellcom To My Website</h1>
+        <form style="float:left; width: 30%; text-align:center;"  action="<%=request.getContextPath() + UrlConst.HOME %>" method="get" >
+            <button type="submit" class="btn btn-primary w-50" style="min-width: 90px">Home</button>    
         </form>
-        <form style="float:right; width: 45%; text-align:left"  action="<%=request.getContextPath() + UrlConst.LOGIN %>" method="get" >
-            <button type="submit" class="btn btn-primary w-50">Login</button>
+        <form style="float:left; width: 30%; text-align:center; margin-left: 5%;"  action="<%=request.getContextPath() + UrlConst.GAME_PLAY %>" method="get" >
+            <button type="submit" class="btn btn-primary w-50" style="min-width: 90px">Play</button>
         </form>
-        
-        	
-        </table>
+        <form style="float:left; width: 30%; text-align:center; margin-left: 5%;"  action="<%=request.getContextPath() + UrlConst.RANKING %>" method="get" >
+            <button type="submit" class="btn btn-primary w-50" style="min-width: 90px">Ranking</button>
+        </form>
         
       </div>
    
-    <!-- Optional JavaScript -->
+    <!-- Optional JavaScript -->	
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

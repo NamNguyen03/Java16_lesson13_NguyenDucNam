@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="utils.UrlConst"%>
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Information</title>
+    <title>Home</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,25 +12,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body>
+  <body> 
       <div style="width:30%; margin-inline: auto; min-width: 300px">
-        <h1 style="text-align: center;">My Information</h1>
-        <table class="table table-striped">
-            <tbody>
-                <tr>
-                    <td>Email</td>
-                    <td>${user.email}</td>
-                </tr>
-                <tr>
-                	<td>Fullname</td>
-                    <td>${user.fullname}</td>
-                </tr>
-                 <tr>
-                	<td>Phone</td>
-                    <td>${user.phone}</td>
-                </tr>
-            </tbody>
-        </table>
+        <h1 style="text-align: center;">Home My Website</h1>
+        <form style="float:left; width: 45%; text-align:right"  action="<%=request.getContextPath() + UrlConst.GAME_PLAY %>" method="get" >
+            <button type="submit" class="btn btn-primary w-50">Play Game</button>    
+        </form>
+        <form style="float:right; width: 45%; text-align:left"  action="<%=request.getContextPath() + UrlConst.INFO %>" method="get" >
+            <button type="submit" class="btn btn-primary w-50">Information</button>
+        </form>
         
       </div>
    

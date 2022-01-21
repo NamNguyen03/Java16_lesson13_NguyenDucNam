@@ -86,7 +86,7 @@ public class UserServlet extends HttpServlet {
 				}else {
 					HttpSession session = req.getSession(); 
 					session.setAttribute("user", user.get());
-					resp.sendRedirect(req.getContextPath() + UrlConst.INFO);
+					resp.sendRedirect(req.getContextPath() + UrlConst.HOME);
 				}
 				
 			}else {

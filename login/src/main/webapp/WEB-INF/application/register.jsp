@@ -17,7 +17,7 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<div style="width: 30%; margin-inline: 35%;">
+	<div style="width:30%; margin-inline: auto; min-width: 300px">
 		<h1 style="text-align: center;">Register</h1>
 		<form action="<%=request.getContextPath() + UrlConst.REGISTER %>"
 			method="post">

@@ -17,7 +17,7 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<div style="width: 30%; margin-inline: 35%;">
+	<div style="width:30%; margin-inline: auto; min-width: 300px">
 		<h1 style="text-align: center;">Login</h1>
 		<c:if test="${message!= null}">
 			<div class="form-text text-danger">${message}</div>
@@ -46,6 +46,9 @@
 			</div>
 			<button type="submit" class="btn btn-primary">Login</button>
 		</form>
+		<form style="margin-top:15px;"  action="<%=request.getContextPath() + UrlConst.REGISTER %>" method="get" >
+            <button type="submit" class="btn btn-primary" style="min-width: 90px;  ">Register</button>    
+        </form>
 	</div>
 
 	<!-- Optional JavaScript -->

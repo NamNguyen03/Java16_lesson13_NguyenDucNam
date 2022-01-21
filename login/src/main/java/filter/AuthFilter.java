@@ -19,20 +19,21 @@ public class AuthFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		
+
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse resp = (HttpServletResponse) response;
 		String path = req.getServletPath();
-		if(path.startsWith(UrlConst.INFO)) {
+		if(path.startsWith(UrlConst.INFO) || path.startsWith(UrlConst.HOME) || path.startsWith(UrlConst.GAME_PLAY)  ) {
 			Object user = req.getSession().getAttribute("user");
 			if(user == null) {
 				resp.sendRedirect(req.getContextPath() + UrlConst.LOGIN);
 				return;
 			}
 		} 
+		
 		chain.doFilter(request, response);
 	}
 
-	
+
 
 }
